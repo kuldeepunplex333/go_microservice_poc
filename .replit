@@ -4,20 +4,10 @@ modules = ["go"]
 channel = "stable-24_05"
 
 [workflows]
-runButton = "Project"
-
-[[workflows.workflow]]
-name = "Project"
-mode = "parallel"
-author = "agent"
-
-[[workflows.workflow.tasks]]
-task = "workflow.run"
-args = "Go Microservice"
+runButton = "Go Microservice"
 
 [[workflows.workflow]]
 name = "Go Microservice"
-author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
@@ -26,8 +16,9 @@ waitForPort = 5000
 
 [[ports]]
 localPort = 5000
-externalPort = 5000
+externalPort = 8080
 
 [[ports]]
-localPort = 8000
-externalPort = 80
+localPort = 8080
+externalPort = 5000
+
