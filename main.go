@@ -43,6 +43,9 @@ func main() {
                 Handler: router,
         }
         // main
+        // second commit 
+        // third commit
+        
         
         if err := server.ListenAndServe(); err != nil && err != http.ErrServerClosed {
                 log.Fatalf("Failed to start server: %v", err)
