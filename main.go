@@ -42,6 +42,7 @@ func main() {
                 Addr:    "0.0.0.0:" + cfg.Port,
                 Handler: router,
         }
+        // main
         
         if err := server.ListenAndServe(); err != nil && err != http.ErrServerClosed {
                 log.Fatalf("Failed to start server: %v", err)
