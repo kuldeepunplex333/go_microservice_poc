@@ -28,7 +28,10 @@ WORKDIR /root/
 COPY --from=builder /app/main .
 
 # Expose the port
-EXPOSE 5000
+EXPOSE 80
+
+# Set environment variable for port
+ENV PORT=80
 
 # Command to run the app
 CMD ["./main"]
